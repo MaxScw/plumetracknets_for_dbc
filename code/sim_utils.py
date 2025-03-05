@@ -26,7 +26,7 @@ np.random.seed(config.seed_global)
 
 
 # from config import sim as simc
-from numba import jit # TODO
+#from numba import jit # TODO
 
 
 # wind/plume sim parameters
