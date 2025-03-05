@@ -16,7 +16,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 import seaborn as sns
 
-from array2gif import write_gif
+#from array2gif import write_gif
 from moviepy.editor import ImageClip, concatenate_videoclips
 from natsort import natsorted
 import contextlib
