@@ -1,3 +1,6 @@
 [submodule "code/pytorch-a2c-ppo-acktr-gail_for_dbc"]
 	path = code/pytorch-a2c-ppo-acktr-gail_for_dbc
 	url = git@github.com:MaxScw/pytorch-a2c-ppo-acktr-gail_for_dbc.git
+[submodule "code/pytorch-a2c-ppo-acktr-gail"]
+	path = code/pytorch-a2c-ppo-acktr-gail
+	url = git@github.com:MaxScw/pytorch-a2c-ppo-acktr-gail.git
