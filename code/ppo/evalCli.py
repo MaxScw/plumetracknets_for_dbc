@@ -102,7 +102,7 @@ import numpy as np
 from pprint import pprint
 import glob
 import sys
-sys.path.append('/home/satsingh/plume/plume2/')
+sys.path.append('/home/mx/dbc/ext/plumetracknets_for_dbc/code/')
 from plume_env import PlumeEnvironment, PlumeFrameStackEnvironment
 #import agents
 import agent_analysis
