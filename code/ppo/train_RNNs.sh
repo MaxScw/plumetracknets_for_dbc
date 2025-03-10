@@ -17,13 +17,13 @@ SAVEDIR=./trained_models/${EXPT}/
 mkdir -p $SAVEDIR
 
 MAXJOBS=7
-SEEDS="2760377"
+#SEEDS="2760377"
 
-#for SEED in $(seq 2); do  
-for SEED in $SEEDS; do  
+for SEED in $(seq 6); do  
+#for SEED in $SEEDS; do  
   for RNNTYPE in VRNN; do
     while (( $(jobs -p | wc -l) >= MAXJOBS )); do sleep 10; done 
-    #SEED=$RANDOM
+    SEED=$RANDOM
 
     DATASTRING=$(echo -e $DATASET | tr -d ' ')
     SHAPESTRING=$(echo -e $SHAPE | tr -d ' ')
@@ -33,7 +33,7 @@ for SEED in $SEEDS; do
     DMAXSTR=$(echo -e $DMAX | tr -d ' ')
     DMINSTR=$(echo -e $DMIN | tr -d ' ')
 
-    OUTSUFFIX=$(date '+%Y%m%d')_${RNNTYPE}_${DATASTRING}_${SHAPESTRING}_bx${BXSTRING}_t${TSTRING}_q${QVARSTR}_dmx${DMAXSTR}_dmn${DMINSTR}_h${HIDDEN}_wd${DECAY}_n${NUMPROC}_code${RNNTYPE}_seed${SEED} #$(openssl rand -hex 1)
+    OUTSUFFIX=$(date '+%Y%m%d')_${RNNTYPE}_${DATASTRING}_${SHAPESTRING}_bx${BXSTRING}_t${TSTRING}_q${QVARSTR}_dmx${DMAXSTR}_dmn${DMINSTR}_h${HIDDEN}_wd${DECAY}_n${NUMPROC}_code${RNNTYPE}_seed${SEED}$(openssl rand -hex 1)
     echo $OUTSUFFIX
 
     nice python -u main.py --env-name plume \
